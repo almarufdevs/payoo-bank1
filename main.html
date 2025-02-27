@@ -31,17 +31,17 @@
                         <h3>Cashout</h3>
                     </div>
 
-                    <div class="box border p-4 text-center rounded-sm">
+                    <div id="TransferMoney-box" class="box border p-4 text-center rounded-sm">
                         <img class="w-8 mx-auto" src="Payoo-MFS-Resources/assets/money1.png" alt="">
                         <h3>Transfer Money</h3>
                     </div>
 
-                    <div class="box border p-4 text-center rounded-sm">
+                    <div id="bonus-box" class="box border p-4 text-center rounded-sm">
                         <img class="w-8 mx-auto" src="Payoo-MFS-Resources/assets/bonus1.png" alt="">
                         <h3>Get Bonus</h3>
                     </div>
 
-                    <div class="box border p-4 text-center rounded-sm">
+                    <div id="pay-bill-box" class="box border p-4 text-center rounded-sm">
                         <img class="w-8 mx-auto" src="Payoo-MFS-Resources/assets/purse1.png" alt="">
                         <h3>Pay Bill</h3>
                     </div>
@@ -52,12 +52,13 @@
                     </div>
                 </div>
                 <section id="addmoney" class="">
-                    <h1 class="p-4 font-bold">Add Money</h1>
+                    
                     <div class="">
                         <div class="hero-content flex-col lg:flex-row-reverse">
-                          
+                            
                           
                           <div class="card  w-full max-w-sm shrink-0 shadow-2xl">
+                            <h1 class="p-4 font-bold">Add Money</h1>
                             <form class="card-body">
                                 <legend>Select A Bank</legend>
                                 <select class="select w-full max-w-xs">
@@ -86,7 +87,12 @@
                         </div>
                       </div>
                 </section>
+
+                <!-- cashout -->
                 <section id="cashout" class="p-10">
+                    <div class="hero-content flex-col lg:flex-row-reverse">
+                        <div class="card  w-full max-w-sm shrink-0 shadow-2xl">
+                        
                     <h1 class=" p-4 font-bold">Cashout</h1>
                     <fieldset class="fieldset">
                         <label class="fieldset-label">Account Number</label>
@@ -100,6 +106,79 @@
                         
                       </fieldset>
                       <button id="cashout-btn" class="btn btn-neutral border-none bg-blue-700">Cashout</button>
+                      </div>
+                    </div>
+                </section>
+
+                <section id="TransferMoney" class="p-10">
+                    
+                    <div class="hero-content flex-col lg:flex-row-reverse">
+                        <div class="card  w-full max-w-sm shrink-0 shadow-2xl">
+                            <h1 class=" p-4 font-bold">Transfer Money</h1>
+                    <fieldset class="fieldset">
+                        <label class="fieldset-label">Account Number</label>
+                        <input value="01301301312" id="account-number" type="Number" class="input" placeholder="Type your Number" required/>
+                        <label class="fieldset-label">Amount</label>
+                        <input id="transfer-amount" type="Number" class="input" placeholder="Type your Number" required/>
+                        <label 
+                         class="fieldset-label">PIN</label>
+                        <input value="1234" id="transfer-pin" type="Number" class="input" placeholder="Type your pin" required/>
+                        <div><a class="link link-hover">Forgot Pin?</a></div>
+                        
+                      </fieldset>
+                      <button id="transfer-btn" class="btn btn-neutral border-none bg-blue-700">Transfer Now</button>
+                </section>
+                <!--bonus-->
+                <section id="get-bonus" class="p-10">
+                    
+                    <div class="hero-content flex-col lg:flex-row-reverse">
+                        <div class="card  w-full max-w-sm shrink-0 shadow-2xl">
+                            <h1 class=" p-4 font-bold">Get Bonus</h1>
+                    <fieldset class="fieldset">
+                        
+                        <label class="fieldset-label">Enter Bonus Coupon</label>
+                        <input id="coupon-number" type="Number" class="input" placeholder="Enter your coupon" required/>
+                        <label 
+                         class="fieldset-label">PIN</label>
+                        <input value="1234" id="bonus-pin" type="Number" class="input" placeholder="Type your pin" required/>
+                        
+                        
+                        
+                      </fieldset>
+                      <br>
+                      <br>
+                      <button id="get-bonus-btn" class="btn btn-neutral border-none bg-blue-700">Get Now</button>
+                </section>
+
+                <!--pay bill-->
+                <section id="paybill" class="p-10">
+                    
+                    <div class="hero-content flex-col lg:flex-row-reverse">
+                        <div class="card  w-full max-w-sm shrink-0 shadow-2xl">
+                            <h1 class=" p-4 font-bold">Pay Bill</h1>
+                            <form class="card-body">
+                                <legend>Select To Pay</legend>
+                                <select class="select w-full max-w-xs">
+                                    <option disabled selected>Select Back</option>
+                                    <option value="Electricity Bill">Electricity Bill</option>
+                                    <option value="Water Bill">Water Bill</option>
+                                    <option value="gas bill">Gas Bill</option>
+                                    <option value="wifi bill">WiFi Bill</option>
+                                    
+                                  </select>
+                                  <fieldset class="fieldset">
+                    <fieldset class="fieldset">
+                        <label class="fieldset-label"> Account Number</label>
+                        <input value="01301301312" id="account-number" type="Number" class="input" placeholder="Type your Number" required/>
+                        <label class="fieldset-label">Amount to Pay</label>
+                        <input id="transfer-amount" type="Number" class="input" placeholder="Type your Number" required/>
+                        <label 
+                         class="fieldset-label">PIN</label>
+                        <input value="1234" id="transfer-pin" type="Number" class="input" placeholder="Type your pin" required/>
+                        <div><a class="link link-hover">Forgot Pin?</a></div>
+                        
+                      </fieldset>
+                      <button id="transfer-btn" class="btn btn-neutral border-none bg-blue-700">Pay Now</button>
                 </section>
             </section>
         </header>
@@ -108,5 +187,10 @@
     <script src="add-money.js"></script>
     <script src="toggle.js"></script>
     <script src="cashout.js"></script>
+    <script src="transfermoney.js"></script>
+    <script src="transferadd.js"></script>
+    <script src="bonusadd.js"></script>
+    <script src="get-bonus.js"></script>
+    <script src="pay-biliadd.js"></script>
 </body>
 </html>
